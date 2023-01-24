@@ -1,0 +1,83 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+
+
+
+
+	</head>
+	
+	<body>
+        <center>
+        <h2> Automating Data Analysis</h2>
+    </center>
+    <span>
+        <form class="grid" action="/result" method="POST">
+
+          {% if name %}
+            
+              <div style="color: blue;margin-left: 60%; padding: 10%; margin-top: 2%; border:black; width: fit-content; background-color: blanchedalmond;" class="let_space">Hello {{name}}, How was your day!!</div>
+            
+
+          {% endif %}
+
+        </span>
+
+        <span style="margin-top: 2%;">
+           
+          <label for="name">Enter your csv file:</label>
+          <input type="text" id="name" name="name">
+
+           
+          <input type="file" id="file-input" accept=".csv">
+          <button id="upload-button">Upload</button>
+
+                <script>
+                    var input = document.getElementById("file-input");
+                    var button = document.getElementById("upload-button");
+
+                    button.addEventListener("click", function() {
+                            input.click();
+                            });
+
+input.addEventListener("change", function() {
+  var file = input.files[0];
+
+  if (file) {
+    var reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+    reader.onload = function (evt) {
+      var csv = evt.target.result;
+      // do something with the CSV contents here
+      // e.g. send it to your server for processing
+
+      document.getElementById("name").value = csv;
+    }
+    reader.onerror = function (evt) {
+      console.error("File could not be read! Code " + evt.target.error.code);
+    }
+  }
+});
+                </script>
+           
+
+          <br><br>
+          <input class="file_submit" type="Submit" value="Automate">
+
+        </span>
+        </form>
+
+        
+
+        
+
+        
+        <br>
+        <br>
+        <br>
+
+
+    </body>
+
+</html>
