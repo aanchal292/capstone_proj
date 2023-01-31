@@ -2,44 +2,28 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-
-	</head>
-	
+	</head>	
 	<body>
         <center>
         <h2> Automating Data Analysis</h2>
-    </center>
-  
+    </center>  
         <form class="grid" action="/result" method="POST">
-
-
-
-     
-
-        <span style="margin-top: 2%;">
-           
+        <span style="margin-top: 2%;">           
           <label for="name">Enter your csv file:</label>
-          <input type="text" id="name" name="name">
-
-           
+          <input type="text" id="name" name="name">           
           <input type="file" id="file-input" accept=".csv">
           <button id="upload-button">Upload</button>
           <input class="file_submit" type="Submit" value="Automate" id="auto">
-
                 <script>
                     var input = document.getElementById("file-input");
                     var button = document.getElementById("upload-button");
                     var button1=document.getElementById("auto")
-
                     button.addEventListener("click", function() {
                             input.click();
                             });
-
                     button.addEventListener("click", function() {
                             input.click();
                             });
-
                     input.addEventListener("change", function() {
                      var file = input.files[0];
 
@@ -58,19 +42,8 @@
                                }
                            });
                 </script>
-           
-
-          
-         
-
         </span>
         <br><br>
-
-       
-    
-     
-     
-
 
         {% if name %}
         <div class="float-parent-element">
@@ -84,17 +57,8 @@
         </div>
     {% endif %}
         </form>
-
-        
-
-        
-
-        
         <br>
         <br>
         <br>
-
-
     </body>
-
 </html>
