@@ -12,7 +12,7 @@ html,body{
   
 .let_space1{
     letter-spacing: 1px;
-    display: inline;
+    display: inside;
     
     word-break: break-all;
     
@@ -26,7 +26,7 @@ html,body{
 }
 .let_space2{
     letter-spacing: 1px;
-    display: inline;
+    display: inside;
     
     word-break: break-all;
     
@@ -40,11 +40,12 @@ html,body{
 
 
 .float-parent-element { 
-    width: 50%; 
+    width: 100%; 
 } 
 .float-child-element { 
     float: left; 
-    width: 50%; 
+    width: 45%; 
+    margin: 2%;
 } 
 
 
