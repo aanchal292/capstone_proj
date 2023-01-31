@@ -10,9 +10,48 @@ html,body{
 
 /* element */
   
-.let_space{
-    letter-spacing: 2px;
+.let_space1{
+    letter-spacing: 1px;
+    display: inline;
+    
+    word-break: break-all;
+    
+    color: blue; 
+    padding: 2%;
+    margin-top: 2%;
+    border:black; 
+    
+    background-color: blanchedalmond;
+
 }
+.let_space2{
+    letter-spacing: 1px;
+    display: inline;
+    
+    word-break: break-all;
+    
+    color: blue; 
+    padding: 2%; 
+    margin-top: 2%; 
+    border:black; 
+    
+    background-color: blanchedalmond;
+}
+
+
+.float-parent-element { 
+    width: 50%; 
+} 
+.float-child-element { 
+    float: left; 
+    width: 50%; 
+} 
+
+
+
+
+
+
 
 
 .c_grid{
